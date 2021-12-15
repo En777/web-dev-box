@@ -1,0 +1,45 @@
+{
+  "name": "app1",
+  "version": "1.0.0",
+  "license": "",
+  "config": {
+    "arch": "ia32",
+    "registry": "https://registry.npm.taobao.org",
+    "electron_mirror": "https://npm.taobao.org/mirrors/electron/"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "build": {
+    "productName": "App1",
+    "win": {
+      "target": "portable",
+      "artifactName": "${productName}_${version}.${ext}"
+    }
+  },
+  "dependencies": {
+    "source-map-support": "0.5.16"
+  },
+  "devDependencies": {
+    "axios": "0.19.0",
+    "dayjs": "1.8.17",
+    "delay": "4.3.0",
+    "lodash": "4.17.15",
+    "electron": "5.0.8",
+    "electron-builder": "22.7.0",
+    "electron-webpack": "2.7.4",
+    "electron-webpack-vue": "2.3.0",
+    "html-loader": "1.0.0-alpha.0",
+    "sass": "1.26.2",
+    "sass-loader": "8.0.2",
+    "store2": "2.10.0",
+    "vue": "2.6.11",
+    "vue-template-compiler": "2.6.11",
+    "webpack": "4.35.3",
+    "yarn": "1.21.0"
+  }
+}
