@@ -33,14 +33,14 @@ import { remote } from 'electron'
 const path = require('path')
 
 const ESMap = {
-  '3': {
-    ecmaVersion: '3',
-    aliases: ['es3'],
-  },
-  '4': {
-    ecmaVersion: '4',
-    aliases: ['es4'],
-  },
+  // '3': {
+  //   ecmaVersion: '3',
+  //   aliases: ['es3'],
+  // },
+  // '4': {
+  //   ecmaVersion: '4',
+  //   aliases: ['es4'],
+  // },
   '5': {
     ecmaVersion: '5',
     aliases: ['es5'],
