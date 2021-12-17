@@ -1,5 +1,5 @@
 {
-  "name": "app1",
+  "name": "web-dev-box",
   "version": "1.0.0",
   "license": "",
   "config": {
@@ -15,7 +15,7 @@
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "build": {
-    "productName": "App1",
+    "productName": "Web Dev Box",
     "win": {
       "target": "portable",
       "artifactName": "${productName}_${version}.${ext}"
@@ -25,15 +25,19 @@
     "source-map-support": "0.5.16"
   },
   "devDependencies": {
+    "acorn": "8.4.1",
     "axios": "0.19.0",
     "dayjs": "1.8.17",
     "delay": "4.3.0",
-    "lodash": "4.17.15",
     "electron": "5.0.8",
     "electron-builder": "22.7.0",
     "electron-webpack": "2.7.4",
     "electron-webpack-vue": "2.3.0",
+    "element-ui": "2.13.2",
+    "fast-glob": "3.2.7",
+    "fs-extra": "8.1.0",
     "html-loader": "1.0.0-alpha.0",
+    "lodash": "4.17.15",
     "sass": "1.26.2",
     "sass-loader": "8.0.2",
     "store2": "2.10.0",

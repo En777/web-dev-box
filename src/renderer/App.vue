@@ -1,6 +1,10 @@
 <template>
   <div class="App">
-    <div>Hello world</div>
+    <el-tabs v-model="activeTab">
+      <el-tab-pane label="ES版本检查" name="ESCheck">
+        <ESCheck/>
+      </el-tab-pane>
+    </el-tabs>
   </div>
 </template>
 
@@ -10,12 +14,13 @@
 export default {
   components: {
     // Demo
+    ESCheck: () => import('./ESCheck.vue')
   },
-  // data () {
-  //   return {
-
-  //   }
-  // },
+  data () {
+    return {
+      activeTab: 'ESCheck'
+    }
+  },
   // methods: {
 
   // },
