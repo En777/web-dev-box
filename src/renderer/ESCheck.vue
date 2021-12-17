@@ -89,7 +89,7 @@ export default {
     return {
       form: {
         version: '5', // es5
-        path: process.cwd(), // path.resolve(process.argv0, '../'),
+        path: require('os').homedir() // process.cwd(), // path.resolve(process.argv0, '../'),
       },
       result: '',
       errorList: [],
@@ -154,9 +154,14 @@ export default {
       return files
     },
   },
-  // mounted () {
-
-  // }
+  mounted () {
+    import('fs-extra').then(lib => lib.default).then(async (fs) => {
+      let desktopDir = path.resolve(require('os').homedir(), './Desktop')
+      if (await fs.pathExists()) {
+        this.form.path = desktopDir
+      }
+    })
+  }
 }
 </script>
 
