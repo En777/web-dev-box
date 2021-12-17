@@ -1,0 +1,50 @@
+name: 'actions'
+
+on:
+  push:
+    tags:
+      - '*'
+  # schedule:
+    # 北京时间 8点半，每月15执行
+    # - cron: '30 0 15 * *'
+jobs:
+  cron:
+    runs-on: windows-2016
+    steps:
+      - name: print
+        run: |
+          pwd
+          ls
+
+      # action命令，切换分支获取源码
+      - name: Checkout
+        # 使用action库  actions/checkout获取源码
+        uses: actions/checkout@v2.4.0
+
+      - name: print
+        run: |
+          pwd
+          ls
+
+      # action命令，安装Node.js
+      - name: install Node.js
+        # 使用action市场的开源库  actions/setup-node安装node
+        uses: actions/setup-node@v2.5.0
+        with:
+          node-version: '14'
+
+      - name: print
+        run: node -v && npm -v && pwd && ls
+
+      - name: npm-install
+        run: npm install
+
+      - name: build
+        run: |
+          npm run dist
+
+      # 发布到github release
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "dist/**.exe"
+          token: ${{ secrets.HUB_TOKEN }}
