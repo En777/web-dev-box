@@ -47,7 +47,7 @@ const ESMap = {
   },
   '2015': {
     ecmaVersion: '6',
-    aliases: ['es5', 'es2015'],
+    aliases: ['es6', 'es2015'],
   },
   '2016': {
     ecmaVersion: '7',
@@ -156,8 +156,8 @@ export default {
   },
   mounted () {
     import('fs-extra').then(lib => lib.default).then(async (fs) => {
-      let desktopDir = path.resolve(require('os').homedir(), './Desktop')
-      if (await fs.pathExists()) {
+      let desktopDir = path.resolve(require('os').homedir(), './Desktop/')
+      if (await fs.pathExists(desktopDir)) {
         this.form.path = desktopDir
       }
     })
