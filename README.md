@@ -6,7 +6,7 @@ web 开发工具箱。
 - js 词法分析(TODO)，分析后会得到 token 列表
 - js 语法分析(TODO)，分析后得到 AST 抽象语法树
 
-体验一下：[下载 Web Dev Box](./releases)
+体验一下：[下载 Web Dev Box](https://github.com/En777/web-dev-box/releases)
 
 本项目使用了 github actions 做了 CICD 自动打包部署，提交代码后，会自动打包出 exe 程序发布到 release 页面。
 
