@@ -23,7 +23,7 @@ web前端开发场景下，一般我们会使用 babel 把 js 代码转换为 ES
 
 如果想在打包时候，自动检查代码是否包含ES6+，建议使用 [`es-check`](https://www.npmjs.com/package/es-check)，比如这样：
 ```bash
-# 检查打包后的 js 是不是 ES5
+# 检查打包后的 js 是不是 ES5，记得先安装 npm install es-check -D
 npm run build && es-check es5 './dist/**/*.js'
 ```
 
