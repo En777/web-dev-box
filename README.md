@@ -33,10 +33,10 @@ web前端开发场景下，一般我们会使用 babel 把 js 代码转换为 ES
 
 ## 技术细节
 
-- acorn ，js代码的解析器(parser)
-- fast-glob ，支持 `glob` 语法从磁盘获取全部想要的文件，还能灵活忽略其他文件
-- electron ，跨平台的桌面端开发框架，可以使用 web 技术快速打包出 windows、mac、linux 客户端
-- github actions ，自动化打包 exe 的服务，由 github 提供
+- acorn，js代码的解析器(parser)
+- fast-glob，支持 `glob` 语法从磁盘获取全部想要的文件，还能灵活忽略其他文件
+- electron，跨平台的桌面端开发框架，可以使用 web 技术快速打包出 windows、mac、linux 客户端
+- github actions，由 github 提供，实现了提交代码，自动构建出 exe 等客户端
 
 本程序是使用 `electron-webpack-quick-start` 脚手架搭建起来的，以下有他的使用说明、文档。
 
