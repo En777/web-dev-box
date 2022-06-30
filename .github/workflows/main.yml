@@ -48,3 +48,4 @@ jobs:
         with:
           artifacts: "dist/**.exe"
           token: ${{ secrets.HUB_TOKEN }}
+          allowUpdates: true
